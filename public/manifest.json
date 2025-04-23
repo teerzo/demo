@@ -1,6 +1,6 @@
 {
   "name": "Next.js App",
-  "short_name": "NextApp",
+  "short_name": "Demo Teerzo",
   "description": "A Next.js Progressive Web App",
   "start_url": "/",
   "display": "standalone",
