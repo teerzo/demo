@@ -7,7 +7,7 @@ export const metadata = {
   title: "Next.js App",
   description: "A Next.js Progressive Web App",
   manifest: "/manifest.json",
-  themeColor: "#000000",
+  themeColor: "#ffffff",
   viewport: "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",
   appleWebApp: {
     capable: true,
@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
         <meta name="apple-mobile-web-app-title" content="Next.js App" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="theme-color" content="#000000" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
       </head>
       <body className={inter.className}>{children}</body>

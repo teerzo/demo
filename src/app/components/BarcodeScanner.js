@@ -1,16 +1,21 @@
 'use client';
-import { BarcodeScanner } from 'react-barcode-scanner'
-import "react-barcode-scanner/polyfill"
+// import { BarcodeScanner } from 'react-barcode-scanner'
+// import "react-barcode-scanner/polyfill"
 
-// export default () => {
-//   return <BarcodeScanner />
-// }
+import dynamic from 'next/dynamic'
+
+const BarcodeScanner = dynamic(() => {
+  import('react-barcode-scanner/polyfill')
+  return import('react-barcode-scanner').then(mod => mod.BarcodeScanner)
+}, { ssr: false })
 
 
 import { useState } from 'react';
 
 export default function Barcode() {
+  const [isConfirmed, setIsConfirmed] = useState(false);
   const [isScanning, setIsScanning] = useState(false);
+  const [result, setResult] = useState(null);
 
   const handleScanClick = () => {
     setIsScanning(true);
@@ -23,12 +28,65 @@ export default function Barcode() {
     console.log('Opening manual entry...');
   };
 
+  const handleScan = (result) => {
+    console.log(result);
+
+    let newResult = {
+      value: '',
+      format: '',
+    }
+
+    if (result && result.length > 0) {
+      console.log(result[0]);
+      newResult.value = result[0].rawValue;
+      newResult.format = result[0].format;
+      setResult(newResult);
+    }
+    else {
+      setResult({ value: 'No value detected', format: 'No format detected' });
+    }
+    setIsScanning(false);
+  }
+
+  const handleConfirm = () => {
+    setIsConfirmed(true);
+  }
+
+
   return (
     <>
       {
+        isConfirmed ?
+          <>
+            <p>Barcode confirmed</p>
+          </>
+          :
+          <>
+          
+          </>
+      }
+      {result ?
+        <>
+          <p>
+            {result?.value} <br />
+            {result?.format}
+          </p>
+
+          <p> $$$ Display image of barcode here $$$ </p>
+
+          <button onClick={handleConfirm}>Confirm Barcode</button>
+        </>
+        :
+        <>
+          <p>No result</p>
+        </>
+      }
+      {
         isScanning ?
           <>
-            < BarcodeScanner />
+            < BarcodeScanner options={{ delay: 500 }} onCapture={handleScan} />
+
+
           </>
           :
           <div className="w-full max-w-md mx-auto p-4">
