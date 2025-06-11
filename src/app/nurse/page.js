@@ -26,7 +26,7 @@ export default function NursePage() {
                             Prefer to watch a quick guide?
                             Check out our Injection Guide Video, a step-by-step walkthrough on how to safely
                             use your Ebglyss pen.
-                            It's simple, fast, and designed to give you confidence for your first injection.
+                            It&apos;s simple, fast, and designed to give you confidence for your first injection.
                         </p>
                         <Video />
                     </div>
@@ -65,7 +65,7 @@ export default function NursePage() {
                         </h2>
                         <p className="text-gray-700">
                             Call <a href="tel:1300790229" className="text-[var(--brand-red)]">1300 790 229</a> (Monday to Friday, 9 AM – 5 PM AEST) and ask to book a
-                            training session with an Inservio Home Nurse. We'll find a time that works for you.
+                            training session with an Inservio Home Nurse. We&apos;ll find a time that works for you.
                         </p>
                         <div className="flex justify-center">
                             <a href="tel:1300790229" className="inline-block mt-4">

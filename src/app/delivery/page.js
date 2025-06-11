@@ -33,7 +33,7 @@ export default function DeliveryPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[var(--brand-red)]">•</span>
-                <span>Once your order is confirmed, you'll receive a text with the delivery details.</span>
+                <span>Once your order is confirmed, you&apos;ll receive a text with the delivery details.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-[var(--brand-red)]">•</span>
@@ -56,7 +56,7 @@ export default function DeliveryPage() {
 
           <div className="w-full space-y-2">
             <h2 className="text-2xl font-semibold text-[var(--brand-black)]">
-              What's Included in Your Order?
+              What&apos;s Included in Your Order?
             </h2>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-start gap-2">
@@ -110,7 +110,7 @@ export default function DeliveryPage() {
               Need Help?
             </h2>
             <p className="text-gray-700">
-              Call <a href="tel:1300790229" className="text-[var(--brand-red)]">1300 790 229</a> (Monday to Friday, 9 AM - 5 PM AEST) and we'll help you with your delivery.
+              Call <a href="tel:1300790229" className="text-[var(--brand-red)]">1300 790 229</a> (Monday to Friday, 9 AM - 5 PM AEST) and we&apos;ll help you with your delivery.
             </p>
             <div className="flex justify-center">
               <a href="tel:1300790229" className="inline-block mt-4">

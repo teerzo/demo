@@ -40,7 +40,7 @@ export default function ProgramPage() {
                         <p className="text-gray-700">
                             The LillyPlus™ Program is designed to support you as you begin treatment with
                             Ebglyss for moderate-to-severe atopic dermatitis. From your first injection through
-                            ongoing care, we're with you every step of the way.
+                            ongoing care, we&apos;re with you every step of the way.
                             <br />
                             This program is managed by Inservio Home on behalf of Eli Lilly Australia.
                         </p>
@@ -48,7 +48,7 @@ export default function ProgramPage() {
 
                     <div className="w-full space-y-2">
                         <h2 className="text-2xl font-semibold text-[var(--brand-black)]">
-                            What's Included in the Program?
+                            What&apos;s Included in the Program?
                         </h2>
                         <ul className="space-y-2 text-gray-700">
                             <li className="flex items-start gap-2">
