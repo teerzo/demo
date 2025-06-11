@@ -7,7 +7,7 @@ export default function MobileNav() {
   const pathname = usePathname();
 
   const isActive = (path) => {
-    return pathname === path;
+    return pathname.indexOf(path) === 0;
   };
 
   return (
@@ -33,7 +33,7 @@ export default function MobileNav() {
             href="/home" 
             className={`flex flex-col items-center justify-center w-1/3 h-full ${
               isActive('/home') 
-                ? 'text-blue-600' 
+                ? 'text-[var(--brand-red)]' 
                 : 'text-gray-600'
             }`}
           >
@@ -47,7 +47,7 @@ export default function MobileNav() {
             href="/nurse" 
             className={`flex flex-col items-center justify-center w-1/3 h-full ${
               isActive('/nurse') 
-                ? 'text-blue-600' 
+                ? 'text-[var(--brand-red)]' 
                 : 'text-gray-600'
             }`}
           >
@@ -61,7 +61,7 @@ export default function MobileNav() {
             href="/delivery" 
             className={`flex flex-col items-center justify-center w-1/3 h-full ${
               isActive('/delivery') 
-                ? 'text-blue-600' 
+                ? 'text-[var(--brand-red)]' 
                 : 'text-gray-600'
             }`}
           >
